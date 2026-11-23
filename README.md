@@ -17,8 +17,11 @@ Sitio web hipermedia de un wearable que reacciona a la proximidad: **ESP32 + sen
 - Anatomía guiada por scroll y visor de 4 vistas del modelo 3D.
 
 ## Cómo verlo
-Abre `index.html` en el navegador (necesita internet para Google Fonts y Anime.js).
-Opcional: guarda Anime.js v4 en `vendor/anime.umd.min.js` (ver `vendor/LEEME.txt`); si falta, se carga desde jsDelivr.
+Sitio publicado: [jstorresh.github.io/Majora-Web](https://jstorresh.github.io/Majora-Web/).
+
+Para verlo localmente, inicia un servidor web en la carpeta del proyecto (por ejemplo, `python3 -m http.server 8000`) y abre `http://localhost:8000`. Esto permite que el navegador cargue correctamente las imágenes usadas por la página. Los archivos `vista-*.webp` están en la raíz del proyecto y sus rutas relativas deben coincidir con esa ubicación.
+
+La página necesita internet para Google Fonts y Anime.js. Opcionalmente, guarda Anime.js v4 en `vendor/anime.umd.min.js` (ver `vendor/LEEME.txt`); si falta, se carga desde jsDelivr.
 
 ## Tecnologías
 HTML, CSS y JavaScript sin dependencias de build · [Anime.js v4](https://animejs.com/)
