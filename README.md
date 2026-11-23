@@ -19,6 +19,8 @@ Sitio web hipermedia de un wearable que reacciona a la proximidad: **ESP32 + sen
 ## Cómo verlo
 Sitio publicado: [jstorresh.github.io/Majora-Web](https://jstorresh.github.io/Majora-Web/).
 
+Simulación en Wokwi: [Abrir proyecto](https://wokwi.com/projects/475753515324763137).
+
 Para verlo localmente, inicia un servidor web en la carpeta del proyecto (por ejemplo, `python3 -m http.server 8000`) y abre `http://localhost:8000`. Esto permite que el navegador cargue correctamente las imágenes usadas por la página. Los archivos `vista-*.webp` están en la raíz del proyecto y sus rutas relativas deben coincidir con esa ubicación.
 
 La página necesita internet para Google Fonts y Anime.js. Opcionalmente, guarda Anime.js v4 en `vendor/anime.umd.min.js` (ver `vendor/LEEME.txt`); si falta, se carga desde jsDelivr.
