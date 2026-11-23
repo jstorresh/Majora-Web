@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#100d16">
+  <meta property="og:title" content="DESPERTAR — Máscara de Majora Interactiva">
+  <meta property="og:description" content="Un wearable que reacciona a la proximidad con ESP32, sensor ultrasónico y dos microservos.">
+  <meta property="og:image" content="assets/vista-frontal.webp">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23100d16%27/%3E%3Ctext x=%2716%27 y=%2723%27 font-size=%2722%27 text-anchor=%27middle%27 fill=%27%23d6ae5c%27 font-family=%27sans-serif%27 font-weight=%27700%27%3EM%3C/text%3E%3C/svg%3E">
+  <script>document.documentElement.classList.add("js");setTimeout(function(){if(!window.__ok)document.documentElement.classList.add("no-motion")},3000)</script>
+  <meta name="description" content="Máscara de Majora Interactiva: un wearable que reacciona a la proximidad mediante ESP32, sensor ultrasónico y dos microservos.">
+  <title>DESPERTAR — Máscara de Majora Interactiva</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="vendor/anime.umd.min.js"></script>
+  <script>window.anime&&anime.animate||document.write('<script src="https://cdn.jsdelivr.net/npm/animejs@4/dist/bundles/anime.umd.min.js"><\/script>')</script>
+  <script>window.anime&&anime.animate||document.write('<script src="https://cdn.jsdelivr.net/npm/animejs@4/lib/anime.umd.min.js"><\/script>')</script>
+  <script src="views-data.js" defer></script>
+  <script src="anatomy-data.js" defer></script>
+  <script src="script.js" defer></script>
+  <script src="viewer.js" defer></script>
+  <script src="fx.js" defer></script>
+  <script src="anatomy.js" defer></script>
+  <script src="mini-data.js" defer></script>
+  <script src="console.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#concepto">Saltar al contenido</a>
+  <div class="noise"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#inicio"><span class="brand-mark">M</span><span>PROYECTO <b>MM—01</b></span></a>
+    <nav id="mainNav" aria-label="Navegación principal">
+      <a href="#concepto">CONCEPTO</a><a href="#estados">ESTADOS</a><a href="#tecnologia">TECNOLOGÍA</a><a href="#modelo">MODELO 3D</a><a href="#proceso">PROCESO</a>
+    </nav>
+    <a class="top-cta" href="#estados">EXPLORAR <span>↗</span></a>
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mainNav">☰</button>
+  </header>
+
+  <main>
+    <section class="hero section-pad" id="inicio">
+      <div class="hero-meta"><span><i class="pulse-dot"></i> WEARABLE INTERACTIVO</span><span>ESP32 / HC-SR04 / SERVO × 2</span></div>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow reveal">UN OBJETO. CUATRO ESTADOS. UNA PRESENCIA.</p>
+          <h1 class="reveal">NO ESTÁ<br><em>DORMIDA.</em></h1>
+          <p class="hero-description reveal">Una máscara que percibe lo que ocurre a su alrededor. Cuando alguien se acerca, despierta. Cuando la distancia desaparece, algo cambia.</p>
+          <div class="hero-actions reveal">
+            <a class="button button-primary" href="#concepto">DESCUBRIR EL PROYECTO <span>↘</span></a>
+            <a class="text-link" href="#estados">VER INTERACCIÓN <span>↗</span></a>
+          </div>
+          <div class="hero-index"><span>01 / 06</span><span>DISEÑO HIPERMEDIA · PROTOTIPO</span></div>
+        </div>
+        <div class="mask-stage" aria-label="Ilustración conceptual de una máscara con ojos móviles">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="crosshair crosshair-a">+</div><div class="crosshair crosshair-b">+</div>
+          <div class="stage-label label-top">FIG. 01 <span>— PRESENCIA DETECTADA</span></div>
+          <svg class="mask-art hero-mask-image" id="maskSvg" viewBox="0 0 577 565" role="img" aria-label="Render frontal del modelo 3D de la Máscara de Majora"><defs><clipPath id="maskStripes"></clipPath></defs><image id="maskFull" href="assets/vista-frontal.webp" width="577" height="565"/><image id="maskLines" href="assets/vista-frontal.webp" width="577" height="565" clip-path="url(#maskStripes)"/></svg>
+          <div class="stage-label label-bottom"><span>PROXIMIDAD</span> <b>ACTIVA</b><span class="meter"><i></i><i></i><i></i><i></i><i></i></span></div>
+          <div class="stage-caption">LA MÁSCARA TE HA NOTADO.</div>
+        </div>
+      </div>
+      <div class="scroll-cue"><span></span> DESPLAZA PARA CONTINUAR</div>
+    </section>
+
+    <section class="intro section-pad" id="concepto">
+      <div class="section-kicker"><span>01 — CONCEPTO</span><span>LA PRESENCIA COMO DISPARADOR</span></div>
+      <div class="intro-grid">
+        <h2 class="section-title">UN OBJETO<br>QUE <em>REACCIONA.</em></h2>
+        <div class="intro-text"><p class="lead">La propuesta transforma la Máscara de Majora en un prop de cosplay interactivo.</p><p>La máscara interpreta la presencia de una persona frente al usuario y modifica su comportamiento mediante el movimiento de los ojos. Los estados deben reconocerse visualmente, sin depender de una pantalla ni de una explicación verbal.</p><div class="data-line"><span>ESCALA</span><b>ÍNTIMA</b><span>INTENCIÓN</span><b>DRAMÁTICA / LÚDICA</b></div></div>
+      </div>
+      <div class="quote-strip"><span>“</span><p>La máscara no permanece estática:<br><em>interpreta la cercanía.</em></p><small>IDEA CENTRAL / MM—01</small></div>
+    </section>
+
+    <section class="states-section section-pad" id="estados">
+      <div class="section-kicker"><span>02 — COMPORTAMIENTO</span><span>INTERACCIÓN POR PROXIMIDAD</span></div>
+      <div class="states-heading"><h2 class="section-title">CUATRO FORMAS<br>DE <em>DESPERTAR.</em></h2><p>Desliza la distancia o elige un estado para ver cómo reaccionan los ojos de la máscara.</p></div>
+      <div class="state-console">
+        <div class="console-visual">
+          <div class="console-top"><span>LIVE STATE SIMULATION</span><span class="live"><i></i> DEMO</span></div>
+          <div class="console-face"><div class="scanline"></div><svg class="mini-svg" id="miniSvg" viewBox="-100 -10 777 585" role="img" aria-label="Máscara con ojos animados y radar de distancia">
+            <defs><radialGradient id="cover"><stop offset="0" stop-color="#f3d02a"/><stop offset=".8" stop-color="#eac316"/></radialGradient><filter id="soft"><feGaussianBlur stdDeviation="2.2"/></filter>
+              <clipPath id="clipL"><circle cx="176" cy="289" r="54"/></clipPath><clipPath id="clipR"><circle cx="408" cy="290" r="54"/></clipPath></defs>
+            <g class="rings"><circle id="rg80" cx="288.5" cy="282.5" r="220" class="mr"/><circle id="rg30" cx="288.5" cy="282.5" r="120" class="mr"/><text x="514.5" y="276.5" class="mt">80 CM</text><text x="414.5" y="276.5" class="mt">30 CM</text></g>
+            <image href="assets/vista-frontal.webp" width="577" height="565"/>
+            <g transform="translate(0 0)"><g id="eyeL"><g clip-path="url(#clipL)"><circle id="covL" r="24" fill="url(#cover)" filter="url(#soft)"/><g id="gazeL"><circle r="19" fill="#5b8a3c" stroke="#2c4a22" stroke-width="2"/><circle id="pupL" r="9" fill="#0e120d"/><circle cx="-6" cy="-7" r="3.2" fill="#fff" opacity=".7"/></g><rect id="lidL" fill="#8f3431"/></g></g><g id="eyeR"><g clip-path="url(#clipR)"><circle id="covR" r="24" fill="url(#cover)" filter="url(#soft)"/><g id="gazeR"><circle r="19" fill="#5b8a3c" stroke="#2c4a22" stroke-width="2"/><circle id="pupR" r="9" fill="#0e120d"/><circle cx="-6" cy="-7" r="3.2" fill="#fff" opacity=".7"/></g><rect id="lidR" fill="#8f3431"/></g></g></g>
+            <circle id="mdotHalo" r="16" fill="none" stroke="#f0cb77" stroke-opacity=".5"/><circle id="mdot" r="9" fill="#f0cb77"/>
+          </svg><div class="glow"></div><div class="distance-readout"><small>DISTANCIA</small><strong id="distanceValue">100 <small>cm</small></strong></div></div>
+          <div class="console-bottom"><span>HC-SR04 / INPUT</span><span id="signalText">SIN PRESENCIA CERCANA</span></div>
+        </div>
+        <div class="state-controls">
+          <p class="eyebrow">SELECCIONA UN ESTADO</p>
+          <button class="state-button active" aria-pressed="true" data-state="dormida"><span>01</span><b>DORMIDA</b><small>Más de 80 cm</small><i>↗</i></button>
+          <button class="state-button" aria-pressed="false" data-state="despertar"><span>02</span><b>DESPERTAR</b><small>Entre 30 y 80 cm</small><i>↗</i></button>
+          <button class="state-button" aria-pressed="false" data-state="posesion"><span>03</span><b>POSESIÓN</b><small>30 cm o menos</small><i>↗</i></button>
+          <button class="state-button" aria-pressed="false" data-state="calma"><span>04</span><b>CALMA</b><small>Retorno después de 5 s</small><i>↗</i></button>
+          <div class="slider-box"><label for="distanceSlider">SIMULAR DISTANCIA <output id="sliderOut" for="distanceSlider">100 cm</output></label><input type="range" id="distanceSlider" min="5" max="120" value="100" step="1"><div class="slider-scale"><span>5</span><span>30</span><span>80</span><span>120 cm</span></div></div>
+          <div class="state-description" aria-live="polite"><span id="stateName">DORMIDA / 01</span><p id="stateDescription">No detecta a nadie. Los ojos permanecen en posición neutra y la máscara parece inactiva.</p></div>
+          <p class="demo-note">Simulación visual conceptual · No está conectada al sensor físico.</p>
+        </div>
+      </div>
+      <div class="state-flow"><span>DORMIDA</span><i>→</i><span>DESPERTAR</span><i>→</i><span>POSESIÓN</span><i>→</i><span>CALMA</span><i>↺</i></div>
+    </section>
+
+    <section class="tech-section section-pad" id="tecnologia">
+      <div class="section-kicker"><span>03 — SISTEMA</span><span>HARDWARE / CONTROL</span></div>
+      <div class="tech-heading"><h2 class="section-title">DE LA PRESENCIA<br>A LA <em>REACCIÓN.</em></h2><p>Un sistema compacto traduce la distancia en movimiento. El sensor detecta, el ESP32 interpreta y los servos ejecutan.</p></div>
+      <div class="tech-grid">
+        <article class="tech-card"><span class="card-number">01 / CONTROL</span><div class="chip-visual">ESP<span>32</span></div><h3>ESP32</h3><p>Controla la máquina de estados y coordina los actuadores.</p><small>GPIO DIGITALES</small></article>
+        <article class="tech-card"><span class="card-number">02 / DETECCIÓN</span><div class="sensor-visual"><i></i><i></i></div><h3>HC-SR04</h3><p>Mide la distancia de una persona frente a la máscara.</p><small>TRIG 05 / ECHO 18</small></article>
+        <article class="tech-card"><span class="card-number">03 / MOVIMIENTO</span><div class="servo-visual"><i></i><i></i></div><h3>2 × SERVOS 180°</h3><p>Ubicados detrás de los ojos, producen el movimiento visible.</p><small>GPIO 13 / GPIO 12</small></article>
+      </div>
+      <div class="signal-chain"><span>PERSONA</span><b>→</b><span>SENSOR</span><b>→</b><span>ESP32</span><b>→</b><span>SERVOS</span><b>→</b><span>OJOS</span></div>
+      <div class="pin-table" role="table" aria-label="Conexiones propuestas">
+        <div role="row"><b>COMPONENTE</b><b>FUNCIÓN</b><b>CONEXIÓN</b></div>
+        <div role="row"><span>ESP32</span><span>Máquina de estados y actuadores</span><code>GPIO + alimentación</code></div>
+        <div role="row"><span>HC-SR04</span><span>Distancia de la persona</span><code>TRIG→5 · ECHO→18 · GND</code></div>
+        <div role="row"><span>Servo izquierdo</span><span>Ojo izquierdo</span><code>Señal→GPIO 13</code></div>
+        <div role="row"><span>Servo derecho</span><span>Ojo derecho</span><code>Señal→GPIO 12</code></div>
+        <div role="row"><span>Alimentación</span><span>ESP32 y servos</span><code>Batería fijada · GND común</code></div>
+      </div>
+      <details class="code-box"><summary>VER CÓDIGO BASE (ESP32 · ARDUINO)</summary><button class="copy-btn" type="button">COPIAR</button>
+<pre><code>#include &lt;ESP32Servo.h&gt;
+Servo ojoIzq, ojoDer;
+const int TRIG = 5, ECHO = 18, SERVO_IZQ = 13, SERVO_DER = 12;
+enum Estado { DORMIDA, DESPERTAR, POSESION, CALMA };
+Estado estado = DORMIDA;
+unsigned long ultimaDeteccion = 0;
+
+float medirDistancia() {
+  digitalWrite(TRIG, LOW);  delayMicroseconds(2);
+  digitalWrite(TRIG, HIGH); delayMicroseconds(10);
+  digitalWrite(TRIG, LOW);
+  long t = pulseIn(ECHO, HIGH, 30000);
+  if (t == 0) return -1;            // lectura inválida
+  return t * 0.0343 / 2.0;
+}
+void ponerDormida()   { ojoIzq.write(90); ojoDer.write(90); }
+void ponerDespertar() { ojoIzq.write(65); ojoDer.write(115); }
+void ponerPosesion()  { ojoIzq.write(45); ojoDer.write(135); }
+
+void loop() {
+  float d = medirDistancia();
+  if (d &lt; 0) { estado = DORMIDA; ponerDormida(); delay(100); return; }
+  if (d &lt;= 30)      { estado = POSESION;  ultimaDeteccion = millis(); ponerPosesion(); }
+  else if (d &lt;= 80) { estado = DESPERTAR; ultimaDeteccion = millis(); ponerDespertar(); }
+  else if (millis() - ultimaDeteccion &gt;= 5000) { estado = CALMA; ponerDormida(); estado = DORMIDA; }
+  delay(100);
+}</code></pre></details>
+      <p class="technical-note"><b>NOTA DE IMPLEMENTACIÓN</b> Verificar la alimentación de los servos y la compatibilidad de niveles del pin ECHO del HC-SR04 con el ESP32. Mantener GND común.</p>
+    </section>
+
+    <section class="anatomy step-0" id="anatomia" data-ar="61.46">
+      <div class="an-sticky">
+        <div class="an-copy"><p class="eyebrow">ANATOMÍA / VISTA INTERNA</p><h2 class="an-title">TODO LO QUE<br>HAY <em>DETRÁS.</em></h2>
+          <ul class="an-steps"><li data-s="0"><span>01</span> La carcasa cerrada: solo se ven los ojos.</li><li data-s="1"><span>02</span> El plano interno: cada pieza tiene su lugar.</li><li data-s="2"><span>03</span> La señal viaja del sensor a los servos.</li></ul>
+          <p class="demo-note">Desplázate para recorrer la estructura.</p></div>
+        <div class="an-stage"><div class="an-wrap" style="aspect-ratio:100/61.46">
+          <img class="an-solid" src="assets/vista-posterior.webp" alt="Vista posterior del modelo 3D" loading="lazy">
+          <img class="an-lines" src="assets/vista-posterior-lineas.webp" alt="" aria-hidden="true" loading="lazy">
+          <svg class="an-svg" viewBox="0 0 100 61.46" preserveAspectRatio="xMinYMin meet" aria-hidden="true"></svg>
+          <div class="an-labels"></div></div></div>
+        <div class="scrub" aria-hidden="true"><i class="mark"></i></div>
+      </div></section>
+
+    <section class="model-section section-pad" id="modelo">
+      <div class="section-kicker"><span>04 — MODELADO 3D</span><span>BLENDER / AVANCE ACTUAL</span></div>
+      <div class="model-heading"><h2 class="section-title">UNA FORMA<br>QUE <em>COBRA VIDA.</em></h2><p>Cuatro vistas del modelo: forma principal, puntas, ojos y una estructura posterior que aloja los componentes. Explóralas y toca los puntos.</p></div>
+      <div class="viewer">
+        <div class="viewer-stage"><div class="pin-wrap"><img id="viewerImg" src="assets/vista-frontal.webp" alt="" width="577" height="565" decoding="async"><div id="pins"></div></div><span class="image-tag" id="viewerTag"></span></div>
+        <div class="viewer-side"><div class="view-tabs" role="group" aria-label="Vistas del modelo"><button class="view-tab" data-view="frontal" aria-pressed="false">FRONTAL</button><button class="view-tab" data-view="tres" aria-pressed="false">3/4</button><button class="view-tab" data-view="lateral" aria-pressed="false">LATERAL</button><button class="view-tab" data-view="posterior" aria-pressed="false">POSTERIOR</button></div><b id="viewerTitle"></b><p id="viewerText"></p><ol id="spotList"></ol><small class="demo-note">Toca los puntos numerados para ubicar cada componente.</small></div>
+      </div>
+      <div class="model-specs"><div><small>UBICACIÓN</small><b>CABEZA / ROSTRO</b></div><div><small>SUJECIÓN</small><b>CORREA AJUSTABLE</b></div><div><small>INTERACCIÓN</small><b>MOVIMIENTO OCULAR</b></div></div>
+    </section>
+
+    <section class="safety-section section-pad">
+      <div class="section-kicker"><span>05 — VIABILIDAD</span><span>DISEÑO CENTRADO EN EL USUARIO</span></div>
+      <h2 class="section-title">LA EXPERIENCIA<br>TAMBIÉN ES <em>COMODIDAD.</em></h2>
+      <div class="safety-list"><p><span>01</span> Evitar puntas expuestas y bordes cortantes cerca del rostro.</p><p><span>02</span> Fijar servos, cables y batería para evitar elementos sueltos.</p><p><span>03</span> Mantener libre el campo de visión del usuario.</p><p><span>04</span> Distribuir el peso con una sujeción posterior ajustable.</p><p><span>05</span> Aislar los componentes electrónicos de la piel.</p><p><span>06</span> Permitir ponerse y retirarse la máscara rápidamente.</p></div>
+    </section>
+
+    <section class="process-section section-pad" id="proceso">
+      <div class="section-kicker"><span>06 — PROCESO</span><span>PRÓXIMOS PASOS</span></div>
+      <h2 class="section-title">DEL MODELO<br>AL <em>PROTOTIPO.</em></h2>
+      <ol class="steps"><li><span>01</span><p>Validar medidas reales del modelo en Blender y colocarlo sobre una cabeza a escala.</p></li><li><span>02</span><p>Definir el mecanismo de cada ojo y comprobar el recorrido de los servos.</p></li><li><span>03</span><p>Montar la simulación en Wokwi y verificar las transiciones de estado.</p></li><li><span>04</span><p>Capturar la simulación funcionando.</p></li><li><span>05</span><p>Ajustar los umbrales de distancia y el tiempo de retorno.</p></li><li><span>06</span><p>Documentar el montaje final y preparar la versión física.</p></li></ol>
+      <p class="wokwi"><span class="button" aria-disabled="true">SIMULACIÓN EN WOKWI · ENLACE PENDIENTE</span></p>
+    </section>
+
+    <section class="ending section-pad">
+      <div class="ending-symbol">MM<span>—</span>01</div>
+      <p class="eyebrow">EL PROYECTO CONTINÚA</p>
+      <h2>EL SIGUIENTE<br>ESTADO ES <em>REAL.</em></h2>
+      <p class="ending-copy">Validar el modelo, comprobar los mecanismos, montar la simulación en Wokwi y documentar el prototipo físico.</p>
+      <a class="button button-primary" href="#inicio">VOLVER AL INICIO <span>↑</span></a>
+      <footer><span>MÁSCARA DE MAJORA INTERACTIVA</span><span>DISEÑO / ELECTRÓNICA / INTERACCIÓN</span><span>MM—01 · 2026</span></footer>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,8 @@
+MÁSCARA DE MAJORA INTERACTIVA — SITIO WEB
+
+Abre index.html en un navegador (requiere internet para Google Fonts y Anime.js).
+- assets/vista-*.webp: las 4 vistas del modelo con fondo transparente.
+- views-data.js: textos y puntos interactivos de cada vista (editable).
+- vendor/anime.umd.min.js: Anime.js v4 local (ver vendor/LEEME.txt); si falta, se usa jsDelivr.
+- La simulación de estados es visual; no está conectada al ESP32.
+- Pendiente: enlace de Wokwi (sección Proceso en index.html).

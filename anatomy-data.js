@@ -1,0 +1,1 @@
+window.ANATOMY={"ar": 61.46, "spots": [{"x": 30.75, "y": 19.48, "label": "ESP32 y batería"}, {"x": 6.76, "y": 22.25, "label": "Correa"}, {"x": 18.97, "y": 33.12, "label": "Servo izquierdo"}, {"x": 39.68, "y": 33.12, "label": "Servo derecho"}, {"x": 29.08, "y": 47.5, "label": "HC-SR04"}]};
