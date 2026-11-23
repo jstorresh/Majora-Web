@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#100d16">
   <meta property="og:title" content="DESPERTAR — Máscara de Majora Interactiva">
   <meta property="og:description" content="Un wearable que reacciona a la proximidad con ESP32, sensor ultrasónico y dos microservos.">
-  <meta property="og:image" content="assets/vista-frontal.webp">
+  <meta property="og:image" content="vista-frontal.webp">
   <meta property="og:type" content="website">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23100d16%27/%3E%3Ctext x=%2716%27 y=%2723%27 font-size=%2722%27 text-anchor=%27middle%27 fill=%27%23d6ae5c%27 font-family=%27sans-serif%27 font-weight=%27700%27%3EM%3C/text%3E%3C/svg%3E">
   <script>document.documentElement.classList.add("js");setTimeout(function(){if(!window.__ok)document.documentElement.classList.add("no-motion")},3000)</script>
@@ -59,7 +59,7 @@
           <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
           <div class="crosshair crosshair-a">+</div><div class="crosshair crosshair-b">+</div>
           <div class="stage-label label-top">FIG. 01 <span>— PRESENCIA DETECTADA</span></div>
-          <svg class="mask-art hero-mask-image" id="maskSvg" viewBox="0 0 577 565" role="img" aria-label="Render frontal del modelo 3D de la Máscara de Majora"><defs><clipPath id="maskStripes"></clipPath></defs><image id="maskFull" href="assets/vista-frontal.webp" width="577" height="565"/><image id="maskLines" href="assets/vista-frontal.webp" width="577" height="565" clip-path="url(#maskStripes)"/></svg>
+          <svg class="mask-art hero-mask-image" id="maskSvg" viewBox="0 0 577 565" role="img" aria-label="Render frontal del modelo 3D de la Máscara de Majora"><defs><clipPath id="maskStripes"></clipPath></defs><image id="maskFull" href="vista-frontal.webp" width="577" height="565"/><image id="maskLines" href="vista-frontal.webp" width="577" height="565" clip-path="url(#maskStripes)"/></svg>
           <div class="stage-label label-bottom"><span>PROXIMIDAD</span> <b>ACTIVA</b><span class="meter"><i></i><i></i><i></i><i></i><i></i></span></div>
           <div class="stage-caption">LA MÁSCARA TE HA NOTADO.</div>
         </div>
@@ -86,7 +86,7 @@
             <defs><radialGradient id="cover"><stop offset="0" stop-color="#f3d02a"/><stop offset=".8" stop-color="#eac316"/></radialGradient><filter id="soft"><feGaussianBlur stdDeviation="2.2"/></filter>
               <clipPath id="clipL"><circle cx="176" cy="289" r="54"/></clipPath><clipPath id="clipR"><circle cx="408" cy="290" r="54"/></clipPath></defs>
             <g class="rings"><circle id="rg80" cx="288.5" cy="282.5" r="220" class="mr"/><circle id="rg30" cx="288.5" cy="282.5" r="120" class="mr"/><text x="514.5" y="276.5" class="mt">80 CM</text><text x="414.5" y="276.5" class="mt">30 CM</text></g>
-            <image href="assets/vista-frontal.webp" width="577" height="565"/>
+            <image href="vista-frontal.webp" width="577" height="565"/>
             <g transform="translate(0 0)"><g id="eyeL"><g clip-path="url(#clipL)"><circle id="covL" r="24" fill="url(#cover)" filter="url(#soft)"/><g id="gazeL"><circle r="19" fill="#5b8a3c" stroke="#2c4a22" stroke-width="2"/><circle id="pupL" r="9" fill="#0e120d"/><circle cx="-6" cy="-7" r="3.2" fill="#fff" opacity=".7"/></g><rect id="lidL" fill="#8f3431"/></g></g><g id="eyeR"><g clip-path="url(#clipR)"><circle id="covR" r="24" fill="url(#cover)" filter="url(#soft)"/><g id="gazeR"><circle r="19" fill="#5b8a3c" stroke="#2c4a22" stroke-width="2"/><circle id="pupR" r="9" fill="#0e120d"/><circle cx="-6" cy="-7" r="3.2" fill="#fff" opacity=".7"/></g><rect id="lidR" fill="#8f3431"/></g></g></g>
             <circle id="mdotHalo" r="16" fill="none" stroke="#f0cb77" stroke-opacity=".5"/><circle id="mdot" r="9" fill="#f0cb77"/>
           </svg><div class="glow"></div><div class="distance-readout"><small>DISTANCIA</small><strong id="distanceValue">100 <small>cm</small></strong></div></div>
@@ -160,8 +160,8 @@ void loop() {
           <ul class="an-steps"><li data-s="0"><span>01</span> La carcasa cerrada: solo se ven los ojos.</li><li data-s="1"><span>02</span> El plano interno: cada pieza tiene su lugar.</li><li data-s="2"><span>03</span> La señal viaja del sensor a los servos.</li></ul>
           <p class="demo-note">Desplázate para recorrer la estructura.</p></div>
         <div class="an-stage"><div class="an-wrap" style="aspect-ratio:100/61.46">
-          <img class="an-solid" src="assets/vista-posterior.webp" alt="Vista posterior del modelo 3D" loading="lazy">
-          <img class="an-lines" src="assets/vista-posterior-lineas.webp" alt="" aria-hidden="true" loading="lazy">
+          <img class="an-solid" src="vista-posterior.webp" alt="Vista posterior del modelo 3D" loading="lazy">
+          <img class="an-lines" src="vista-posterior-lineas.webp" alt="" aria-hidden="true" loading="lazy">
           <svg class="an-svg" viewBox="0 0 100 61.46" preserveAspectRatio="xMinYMin meet" aria-hidden="true"></svg>
           <div class="an-labels"></div></div></div>
         <div class="scrub" aria-hidden="true"><i class="mark"></i></div>
@@ -171,7 +171,7 @@ void loop() {
       <div class="section-kicker"><span>04 — MODELADO 3D</span><span>BLENDER / AVANCE ACTUAL</span></div>
       <div class="model-heading"><h2 class="section-title">UNA FORMA<br>QUE <em>COBRA VIDA.</em></h2><p>Cuatro vistas del modelo: forma principal, puntas, ojos y una estructura posterior que aloja los componentes. Explóralas y toca los puntos.</p></div>
       <div class="viewer">
-        <div class="viewer-stage"><div class="pin-wrap"><img id="viewerImg" src="assets/vista-frontal.webp" alt="" width="577" height="565" decoding="async"><div id="pins"></div></div><span class="image-tag" id="viewerTag"></span></div>
+        <div class="viewer-stage"><div class="pin-wrap"><img id="viewerImg" src="vista-frontal.webp" alt="" width="577" height="565" decoding="async"><div id="pins"></div></div><span class="image-tag" id="viewerTag"></span></div>
         <div class="viewer-side"><div class="view-tabs" role="group" aria-label="Vistas del modelo"><button class="view-tab" data-view="frontal" aria-pressed="false">FRONTAL</button><button class="view-tab" data-view="tres" aria-pressed="false">3/4</button><button class="view-tab" data-view="lateral" aria-pressed="false">LATERAL</button><button class="view-tab" data-view="posterior" aria-pressed="false">POSTERIOR</button></div><b id="viewerTitle"></b><p id="viewerText"></p><ol id="spotList"></ol><small class="demo-note">Toca los puntos numerados para ubicar cada componente.</small></div>
       </div>
       <div class="model-specs"><div><small>UBICACIÓN</small><b>CABEZA / ROSTRO</b></div><div><small>SUJECIÓN</small><b>CORREA AJUSTABLE</b></div><div><small>INTERACCIÓN</small><b>MOVIMIENTO OCULAR</b></div></div>
